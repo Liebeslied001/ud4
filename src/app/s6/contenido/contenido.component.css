@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+}
+.container p{
+    font-size: xx-large;
+    width: 50%;
+}
+.container img{
+    width: 50%;
+}

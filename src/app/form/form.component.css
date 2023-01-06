@@ -1,0 +1,22 @@
+.field{
+    width: 100%;
+    height: 42px;
+    padding: 0.5rem;
+}
+.field input{
+    border-bottom: 1px solid gray;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    margin-top: 5%;
+}
+.field button{
+    background-color: green;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    margin-top: 5%;
+}

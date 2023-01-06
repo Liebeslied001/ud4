@@ -1,0 +1,29 @@
+<div class="field">
+    <input  type="number" [(ngModel)]="input1"> 
+    <input  type="number" [(ngModel)]="input2"> 
+
+    <select [(ngModel)]="option" name="opt" id="opt">
+        <option  *ngFor="let opt of options" value="{{opt}}">{{opt}}</option>
+    </select>
+
+    <div>
+        <p>Resultado: </p>
+        <div [ngSwitch]="option">
+            <div *ngSwitchCase="'Suma'" [ngStyle]="{'color':'green'}" >
+                {{input1 + input2}}
+            </div>
+            <div *ngSwitchCase="'Resta'" [ngStyle]="{'color':'blue'}">
+                {{input1 - input2}}
+            </div>
+            <div *ngSwitchCase="'Multiplicacion'"  [ngStyle]="{'color':'gray'}">
+                {{input1 * input2}}
+            </div>
+            <div *ngSwitchCase="'Division'" [ngStyle]="{'color':'purple'}">
+                {{input1 / input2}}
+            </div>
+            <div *ngSwitchDefault="" [ngStyle]="{'color':'red'}">
+                Elija una opcion
+            </div>
+        </div> 
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<pre>{{contactForm.value|json}}</pre>
+<h1>Contact form</h1>
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" >
+    <div class="mb-4">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="model.name" required #name="ngModel">
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger" >This field is required.</div>
+    </div>
+
+    <div class="mb-4 form-check">
+        <label for="checkAdult" class="form-label">Eres mayor de edad?</label>
+        <input type="checkbox" class="form-check-input" id="checkAdult" name="checkAdult"
+         [(ngModel)]="model.checkAdult" required #checkAdult="ngModel" >
+        <div [hidden]="checkAdult.valid || checkAdult.pristine"  class="alert alert-danger">This field is required.</div>
+    </div>
+
+    <div class="mb-4">
+        <label for="Area" class="form-label">Area</label>
+        <select name="Area" id="Area" class="form-select form-select-sm" name="area"
+         [(ngModel)]="model.area" required #area="ngModel">
+            <option selected>Visualiza las areas</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Ventas">Ventas</option>
+            <option value="Otro">Otro</option>
+
+        </select>
+        <div [hidden]="area.valid || area.pristine" class="alert alert-danger">This field is required.</div>
+    </div>
+
+    <div class="mb-4">
+        <label for="comment" class="form-label">Comentario</label>
+        <textarea class="form-control" name="comment" id="comment"  rows="4" 
+        placeholder="Dejanos un comentario" [(ngModel)]="model.comment" required #comment="ngModel"></textarea>
+        <div [hidden]="comment.valid || comment.pristine" class="alert alert-danger">This field is required.</div>
+    </div>
+
+    <div class="d-grid gap-2 col-4 float-end ">
+        <button type="submit" class="btn btn-info btn-lg" [disabled]="contactForm.invalid">Enviar</button>
+    </div>
+
+</form>
+
