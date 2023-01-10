@@ -11,6 +11,8 @@ import { FocusDirective } from './focus.directive';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TformComponent } from './tform/tform.component';
 import { RformComponent } from './rform/rform.component';
+import { S13Module } from './s13/s13.module';
+import { S14Module } from './s14/s14.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { RformComponent } from './rform/rform.component';
     S6Module,
     FormsModule,
     ReactiveFormsModule,
+    S13Module,
+    S14Module
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,25 @@
+<h1>Registro de Personas</h1>
+<app-child  [hidden]="userForm.invalid" [name]="user.name" [dni]="user.dni" [state]="user.state"></app-child>
+<form (ngSubmit)="onSubmit(userForm)" #userForm="ngForm">
+
+    <div>
+        <label class="form-label" for="">Nombre</label>
+        <input name="name" id="name" class="form-control" type="text" [(ngModel)] ="user.name" required #name="ngModel">
+    </div>
+    <div>
+        <label class="form-label" for="">DNI</label>
+        <input name="dni" id="dni" class="form-control" type="number" [(ngModel)]="user.dni" #dni="ngModel">
+    </div>
+    <div>
+        <label class="form-label" for="">Estado Civil</label>
+        <select name="state" id="state" class="form-control" [(ngModel)]="user.state" #state="ngModel">
+            <option value="Soltero">Soltero</option>
+            <option value="Casado">Casado</option>
+            <option value="Divorciado">Divorciado</option>
+            <option value="Viudo">Viudo</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-success mt-3">Enviar</button>
+
+    
+</form>

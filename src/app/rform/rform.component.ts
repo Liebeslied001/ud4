@@ -13,6 +13,16 @@ export class RformComponent implements OnInit {
 
   ngOnInit(): void {
     this.contactForm = this.initForm();
+    //this.onPatchValue();
+    //this.onSetValue();
+  }
+
+  onPatchValue():void{
+    this.contactForm.patchValue({name: 'Joseph'})
+  }
+
+  onSetValue():void{
+    this.contactForm.setValue({Comment: 'Hola Mundo'})
   }
 
   onSubmit(): void{

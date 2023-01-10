@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-interface ContactForm{
+interface contactForm{
   "name": string;
   "checkAdult": boolean;
   "area": string;
   "comment": string;
 }
-
-
 
 @Component({
   selector: 'app-tform',
@@ -24,6 +22,7 @@ export class TformComponent implements OnInit {
   }
 
   constructor(){}
+  
   ngOnInit(): void {
     
   }
